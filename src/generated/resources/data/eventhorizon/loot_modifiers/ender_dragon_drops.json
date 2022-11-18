@@ -1,0 +1,10 @@
+{
+  "type": "eventhorizon:ender_dragon_drops",
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:entities/ghast"
+    }
+  ],
+  "item": "eventhorizon:ender_dragon_scale"
+}
