@@ -1,3 +1,4 @@
-// 1.19.2	2022-11-18T17:41:35.5091021	Global Loot Modifiers : eventhorizon
-7158805a1575e12b18e683d5a917c29beab48233 data/eventhorizon/loot_modifiers/ender_dragon_drops.json
-b7bcd3ed0c050d23feaef5a638511c3eb4baca61 data/forge/loot_modifiers/global_loot_modifiers.json
+// 1.19.2	2022-12-11T17:25:01.2669996	Global Loot Modifiers : eventhorizon
+9bc4880a5f71b4f62ba1aa4039ccaf4860d1fb73 data/eventhorizon/loot_modifiers/ender_dragon_drops.json
+4780f05f06dc374c59441526bf1415913d18cad4 data/eventhorizon/loot_modifiers/end_city_tresure_modifier.json
+f271e4c1114f62cb198d72a651892a242a4b2c84 data/forge/loot_modifiers/global_loot_modifiers.json

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "eventhorizon:blocks/titanium_ore"
+  }
+}

@@ -1,8 +1,6 @@
-package com.generalrs.eventhorizon.events;
+package com.generalrs.eventhorizon.events.loot;
 
-import com.generalrs.eventhorizon.EventHorizon;
 import com.generalrs.eventhorizon.entity.GlowingItem;
-import com.generalrs.eventhorizon.items.ItemRegister;
 import com.google.common.base.Suppliers;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
@@ -19,25 +17,30 @@ import net.minecraftforge.common.loot.LootModifier;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.Random;
 import java.util.function.Supplier;
 
-public class DropGlowingItem extends LootModifier {
-    public static final Supplier<Codec<DropGlowingItem>> CODEC = Suppliers.memoize(()
-            -> RecordCodecBuilder.create(inst -> codecStart(inst).and(ForgeRegistries.ITEMS.getCodec()
-            .fieldOf("item").forGetter(m -> m.item)).apply(inst, DropGlowingItem::new)));
+public class AddItem extends LootModifier {
+    public static final Supplier<Codec<AddItem>> CODEC = Suppliers.memoize(()
+            -> RecordCodecBuilder.create(inst -> inst.group(LOOT_CONDITIONS_CODEC.fieldOf("conditions").forGetter(m-> m.conditions),ForgeRegistries.ITEMS.getCodec()
+            .fieldOf("item").forGetter(m -> m.item),
+            Codec.FLOAT.fieldOf("chance").forGetter(m-> m.chance)).apply(inst, AddItem::new)));
     private final Item item;
+    private final float chance;
 
-    protected DropGlowingItem(LootItemCondition[] conditionsIn, Item item) {
+    protected AddItem(LootItemCondition[] conditionsIn,Item item,float chance) {
         super(conditionsIn);
         this.item = item;
+        this.chance = chance;
     }
 
     @Override
     protected @NotNull ObjectArrayList<ItemStack> doApply(ObjectArrayList<ItemStack> generatedLoot, LootContext context) {
-        Vec3 pos = context.getParam(LootContextParams.THIS_ENTITY).position();
-        Level level = context.getLevel();
-        level.addFreshEntity(new GlowingItem(level,pos.x,pos.y,pos.z,new ItemStack(item,context.getRandom().nextInt(1,2)),false));
-        System.out.println("registered");
+        float ran = chance*100;
+        Random random = new Random();
+        if (random.nextFloat(0,100)<ran){
+            generatedLoot.add(new ItemStack(item,1));
+        }
         return generatedLoot;
     }
 

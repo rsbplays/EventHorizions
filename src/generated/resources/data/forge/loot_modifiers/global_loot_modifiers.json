@@ -1,6 +1,7 @@
 {
   "entries": [
-    "eventhorizon:ender_dragon_drops"
+    "eventhorizon:ender_dragon_drops",
+    "eventhorizon:end_city_tresure_modifier"
   ],
   "replace": false
 }

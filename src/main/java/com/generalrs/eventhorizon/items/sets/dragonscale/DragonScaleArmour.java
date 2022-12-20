@@ -1,23 +1,43 @@
 package com.generalrs.eventhorizon.items.sets.dragonscale;
 
-import com.generalrs.eventhorizon.items.sets.EventHorizionsArmour;
+import com.generalrs.eventhorizon.items.EventHorizionsArmor;
+import com.generalrs.eventhorizon.items.sets.EventHorizionsArmourMaterial;
+import com.google.common.collect.ImmutableMultimap;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TextColor;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.inventory.tooltip.TooltipComponent;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.Nullable;
+import org.w3c.dom.Text;
 
-public class DragonScaleArmour extends ArmorItem {
+import java.util.List;
+
+public class DragonScaleArmour extends ArmorItem implements EventHorizionsArmor {
+    EquipmentSlot slot;
     public DragonScaleArmour(ArmorMaterial pMaterial, EquipmentSlot pSlot, Properties pProperties) {
         super(pMaterial,pSlot, pProperties);
+        slot=pSlot;
     }
 
+    @Override
+    public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
+        super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
+        pTooltipComponents.add(Component.literal(ChatFormatting.BLUE+"+"+((EventHorizionsArmourMaterial)((ArmorItem)pStack.getItem()).getMaterial()).getAddedArmourReduction(((DragonScaleArmour)pStack.getItem()).slot)+" Defense"));
+    }
+    
     public static DragonScaleMaterial getMaterial1(){
         return new DragonScaleMaterial();
     }
 }
-class DragonScaleMaterial implements EventHorizionsArmour {
+class DragonScaleMaterial implements EventHorizionsArmourMaterial {
 
     @Override
     public int getDurabilityForSlot(EquipmentSlot pSlot) {
@@ -95,4 +115,5 @@ class DragonScaleMaterial implements EventHorizionsArmour {
 
         return 4;
     }
+
 }

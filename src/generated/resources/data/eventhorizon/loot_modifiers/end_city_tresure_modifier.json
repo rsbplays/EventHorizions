@@ -1,9 +1,10 @@
 {
-  "type": "eventhorizon:drop_glowing_item",
+  "type": "eventhorizon:additem_modifier",
+  "chance": 0.25,
   "conditions": [
     {
       "condition": "forge:loot_table_id",
-      "loot_table_id": "minecraft:entities/ender_dragon"
+      "loot_table_id": "minecraft:chests/end_city_treasure"
     }
   ],
   "item": "eventhorizon:ender_dragon_scale"

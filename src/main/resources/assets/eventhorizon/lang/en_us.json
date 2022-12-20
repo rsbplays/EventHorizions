@@ -1,0 +1,11 @@
+{
+  "item.eventhorizon.enderscale_boots": "Enderscale boots",
+  "item.eventhorizon.enderscale_legs": "Enderscale leggings",
+  "item.eventhorizon.enderscale_chestplate": "Enderscale chestplate",
+  "item.eventhorizon.enderscale_helmet": "Enderscale helmet",
+
+  "tooltips.crushertooltip": "This substance is too hard to smelt\nTry using a crusher",
+  "tooltips.addshifttooltip": "Press Shift for info",
+
+  "block.eventhorizon.titanium_ore": "Titanium Ore"
+}
