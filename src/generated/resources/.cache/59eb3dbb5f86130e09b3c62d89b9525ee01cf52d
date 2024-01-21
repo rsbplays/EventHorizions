@@ -1,0 +1,6 @@
+// 1.20.1	2023-11-06T22:07:54.4944431	Loot Tables
+ef5e254eae32335aceda11ce776309c8b763f32d data/evh/loot_tables/blocks/cobalt_block.json
+12cce77d1ce6b9cc35efaa57d85d3b3f92939db7 data/evh/loot_tables/blocks/cobalt_ore.json
+602350868f57ffed646cc5dfe255f8bbed74ee3e data/evh/loot_tables/blocks/grindstone.json
+067424332c9e6f2c6ab7b48314eb74bafdb55313 data/evh/loot_tables/blocks/simple_alloy_furnace.json
+b156b8b8b4ef85e8d6db7bf461d16ea9aea2f74a data/evh/loot_tables/blocks/steel_block.json

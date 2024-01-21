@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "evh:block/simple_alloy_furnace_top",
+    "east": "evh:block/simple_alloy_furnace_side",
+    "north": "evh:block/simple_alloy_furnace_front",
+    "south": "evh:block/simple_alloy_furnace_side",
+    "up": "evh:block/simple_alloy_furnace_top",
+    "west": "evh:block/simple_alloy_furnace_side"
+  }
+}

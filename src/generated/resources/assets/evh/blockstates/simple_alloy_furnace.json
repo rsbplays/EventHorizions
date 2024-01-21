@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "evh:block/simple_alloy_furnace",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "evh:block/simple_alloy_furnace"
+    },
+    "facing=south": {
+      "model": "evh:block/simple_alloy_furnace",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "evh:block/simple_alloy_furnace",
+      "y": 270
+    }
+  }
+}

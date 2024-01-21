@@ -1,0 +1,9 @@
+{
+  "type": "evh:grindstone_recipe",
+
+  "ingredient": "minecraft:coal",
+  "amount": 1,
+  "output": "evh:pulverised_coal",
+
+  "show_notification": true
+}

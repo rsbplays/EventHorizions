@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "evh:block/cobalt_block"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "evh:alloy_furnace_recipe",
+
+  "ingredient1": "minecraft:coal",
+  "ingredient2": "minecraft:iron_ingot",
+  "amount": 1,
+  "output": "evh:pulverised_coal",
+
+  "show_notification": true
+}

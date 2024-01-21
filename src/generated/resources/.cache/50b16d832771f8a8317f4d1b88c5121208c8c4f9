@@ -1,0 +1,4 @@
+// 1.20.1	2023-11-06T22:03:02.3318094	Tags for minecraft:block mod id vanilla
+c6eae8a28431e5b7df32803b3b6590a22f9162d1 data/evh/tags/blocks/testtag.json
+d98236a3c2890f3894a72a38c48eaf5c5515063b data/minecraft/tags/blocks/mineable/pickaxe.json
+d98236a3c2890f3894a72a38c48eaf5c5515063b data/minecraft/tags/blocks/needs_iron_tool.json
